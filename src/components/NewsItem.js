@@ -41,6 +41,7 @@ const NewsItem = () => {
         <option value="de">de</option>
         <option value="us">us</option>
         <option value="tr">tr</option>
+        <option value="gb">gb</option>
       </select>
       <div className="news_list">
         {news.map((article) => (
