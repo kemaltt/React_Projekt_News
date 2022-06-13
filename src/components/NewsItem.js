@@ -8,7 +8,10 @@ const NewsItem = () => {
   const [country, setCountry] = useState("de");
 
   const handleInput = () => {
-    console.log(input);
+    let filteredNews = news.filter((news) =>
+      news.title.toLowerCase().includes(input.toLowerCase())
+    );
+    setNews(filteredNews);
   };
 
   useEffect(() => {
