@@ -9,7 +9,6 @@ const NewsItem = () => {
 
   const handleInput = () => {
     console.log(input);
-    console.log(country);
   };
 
   useEffect(() => {
@@ -18,7 +17,7 @@ const NewsItem = () => {
     )
       .then((res) => res.json())
       .then((json) => {
-        // console.log(json.articles);
+        console.log(json.articles);
         let articles = json.articles;
         setNews(articles);
       });
@@ -44,11 +43,13 @@ const NewsItem = () => {
         <option value="gb">gb</option>
       </select>
       <div className="news_list">
-        {news.map((article) => (
+        {news.map((article, i) => (
           <NewsList
+            key={i}
             img={article.urlToImage}
             title={article.title}
             description={article.description}
+            content={article.content}
             url={article.url}
             date={article.publishedAt}
           />

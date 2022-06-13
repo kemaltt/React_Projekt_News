@@ -1,7 +1,7 @@
-const NewsList = ({ img, title, description, url, date }) => {
+const NewsList = ({ img, title, description, url, date, i, content }) => {
   return (
     <div className="news_card">
-      <img src={img} alt="" />
+      <img src={img} alt="img" />
       <h4>{title}</h4>
       <p className="description">{description}</p>
       <p className="date">{date.slice(0, 10)}</p>
